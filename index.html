@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Information Tutorial</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="logo">EduTech</div>
+        <ul>
+            <li><a href="#" onclick="showSection('introPage')">Home</a></li>
+            <li><a href="#" onclick="showSection('mainContent')">Courses</a></li>
+            <li><a href="#" onclick="showSection('feedbackSection')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Intro / Hero Section -->
+    <div id="introPage" class="section">
+        <h1>Welcome to Online Information Tutorial</h1>
+        <p>Master Web Development, Programming, and Data Science.</p>
+        <button onclick="showSection('mainContent')">Explore Courses</button>
+    </div>
+
+    <!-- Main Content (Hidden initially) -->
+    <div id="mainContent" class="section" style="display:none;">
+
+        <h2>Our Premium Courses</h2>
+        <div id="courseList">
+            <!-- Courses rendered by JS -->
+        </div>
+
+        <h2>Shopping Cart</h2>
+        <div id="cart">
+            <ul id="cartItems">
+                <!-- Cart items go here -->
+            </ul>
+            <div id="totalWrapper">Total Bill: $<span id="totalBill">0</span></div>
+            <button id="purchaseBtn" onclick="checkout()">Purchase Now</button>
+        </div>
+
+    </div>
+
+    <!-- Feedback Section (Separate for direct navigation) -->
+    <div id="feedbackSection" class="section" style="display:none;">
+        <h2>Contact & Feedback</h2>
+        <div class="feedback-container">
+            <input type="text" id="feedbackInput" placeholder="How was your experience?">
+            <button class="feedback-btn" onclick="submitFeedback()">Submit Feedback</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
